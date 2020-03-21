@@ -1,4 +1,4 @@
-package emailapp
+package Java.emailapp;
 import java.util.Scanner;
 
 public class Email {
@@ -13,9 +13,9 @@ public class Email {
       private String companySuffix = "someCompany.com";
 
       // Constructor will receive first/last name
-            public Email(Strting firstName, String lastName){
+            public Email(String firstName, String lastName){
 	      this.firstName  = firstName;
-	      this.lastName: lastName;
+	      this.lastName = lastName;
 	      System.out.println("Email Created: " + this.firstName + " " + this.lastName);
 
 	      // Call a method asking for the user's department => returns the department
@@ -26,22 +26,21 @@ public class Email {
 	      this.password = randomPassword(defaultPasswordLength);
 
 	      //Generate Email
-	      this.email = firstName.toLowerCase() + "." + lastName.toLwerCase() + "@" + 
+	      this.email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + 
 		      department + "." + companySuffix;
 	      System.out.println("Your email is: " + email);
       }
 
       // Set the uder's department
       private String setDepartment() {
-          System.out.println("Enter the department: \n1 for Sales \n2 for Development \n3 for 
-			 + " Accounting \n0 for none");
+          System.out.println("Enter the department: \n1 for Sales \n2 for Development \n3 for  Accounting \n0 for none");
      	Scanner in =  new Scanner(System.in);
 	int departmentChoice = in.nextInt();
 	// Change to switch
-	if(departmentChoice === 1) {return "sales"}
-	else if(departmentChoice === 2) {return "dev"}
-	else if(departmentChoice ===3) {return "acct"}
-	else {return ""}
+	if(departmentChoice == 1) {return "sales";}
+	else if(departmentChoice == 2) {return "dev";}
+	else if(departmentChoice ==3) {return "acct";}
+	else {return "";}
 
 }
 
@@ -71,15 +70,16 @@ public class Email {
          this.password = randomPassword(defaultPasswordLength);
      }
     // Get password
-    public String getPassword(){return password}
+    public String getPassword(){return password;}
     // Get email
-    public String getEmail(){return email}
+    public String getEmail(){return email;}
     // Get mailbox capacity
-    public int getMailboxCapacity(){return mailboxCapacity}
+    public int getMailboxCapacity(){return mailboxCapacity;}
 
     //Display info
     public String showInfo(){
         return "Name: " + firstName + " " + lastName
 	+ "Email: " + email 
-	 + "Mailbox capacity: " + mailboxCapacit + "mb";
+	 + "Mailbox capacity: " + mailboxCapacity + "mb";
     }
+}
