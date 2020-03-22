@@ -1,4 +1,3 @@
-package Java.emailapp;
 import java.util.Scanner;
 
 public class Email {
@@ -6,7 +5,7 @@ public class Email {
       private	String lastName;
       private	String password;
       private	String department;
-      private	int mailboxCapacity;
+      private	int mailboxCapacity = 500;
       private	String alternateEmail;
       private   int defaultPasswordLength = 8;
       private   String email;
@@ -79,7 +78,9 @@ public class Email {
     //Display info
     public String showInfo(){
         return "Name: " + firstName + " " + lastName
-	+ "Email: " + email 
-	 + "Mailbox capacity: " + mailboxCapacity + "mb";
+	+ " Email: " + email 
+	 + " Mailbox capacity: " + mailboxCapacity + "mb";
     }
 }
+
+

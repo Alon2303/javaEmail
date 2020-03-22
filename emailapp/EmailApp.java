@@ -1,7 +1,6 @@
-package Java.emailapp;
-
-public class  EmailApp {
+class  EmailApp {
     public static void main(String[] args){
-        Java.Email em1 = new Java.Email("John","Smith");
+        Email em1 = new Email("John","Smith");
+	System.out.println(em1.showInfo());
     }
 }
